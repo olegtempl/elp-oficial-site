@@ -1,23 +1,25 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel='stylesheet', type='text/css', href='styles/index.css')
-        title Lambda restaraunt
-    body
-        header
-        	include header/header.pug
-        //- main
-        main
-           	include main/block_promo.pug
-            include main/block_1.pug
+//- TODO:
+	* шапку из последнего фриланса
+	* перевести на express + подтяжка данных из json файла => конвертация в html
+include ./templates/head
+	//- header
+	header
+		include ./templates/header
+	//- main content
+	main
+		include scheme/scheme.pug
+		//- добавить возврат после каждого пункта к схеме
+		include documentation/documentation.pug
+	//- footer
+	footer
+		include ./templates/footer
 
-            aside
-            	aside.pug 
-            
-        
-        //- footer
-        footer
-            include footer/footer.pug
+
+
+
+
+
+
+//- .container 
+//- 	.
+//- 		include 
