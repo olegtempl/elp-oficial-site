@@ -1,0 +1,19 @@
+.services-lines {
+  display: flex;
+  padding-bottom: 25px;
+  flex-wrap: nowrap;
+  flex-flow: column;
+
+  .horizontal-line-wrap {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+  }
+  .horizontal-line {
+      hr {
+        height: 4px;
+      }
+      // background-color: rgba(ping, 0.8);
+  }
+}

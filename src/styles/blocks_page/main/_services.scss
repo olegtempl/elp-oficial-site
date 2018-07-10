@@ -1,0 +1,43 @@
+/*
+    Блок описывающий один большой таск в схеме функционала
+*/
+.template-block {
+  border: 2px dotted ping;
+  // background-color: rgba(ping, 0.3);
+  padding: auto; // отцентровать текст по центру
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
+}
+/*
+  Блок описывающий задачи входящие в один большой таск в схеме функционала
+*/
+.operation-block {
+
+}
+
+
+
+.wrap-schem {
+  // ????
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: row;
+  align-content: center;
+  border: 2px dotted #000;
+  }
+  @import '_lines.scss';
+  .services-blocks {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-flow: column;
+      /*
+      Всем наследниками pb:25pх
+      для блоков сделать больше отступ
+          .tests-block
+          .validation-block
+          .javascript-bundler-block
+      последнему блоку убрать  отступ
+      */
+  }
+}
