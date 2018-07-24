@@ -1,43 +1,87 @@
-/*
-    Блок описывающий один большой таск в схеме функционала
-*/
-.template-block {
-  border: 2px dotted ping;
-  // background-color: rgba(ping, 0.3);
-  padding: auto; // отцентровать текст по центру
-  // display: flex;
-  // justify-content: center;
-  // align-content: center;
+.schem {
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding-left: 22%;
 }
-/*
-  Блок описывающий задачи входящие в один большой таск в схеме функционала
-*/
-.operation-block {
-
-}
-
-
 
 .wrap-schem {
+  @import 'lines';
   // ????
   display: flex;
   flex-wrap: nowrap;
   flex-flow: row;
   align-content: center;
   border: 2px dotted #000;
+  .main-block-scheme, .template-block {
+      border: 5px solid pink;
   }
-  @import '_lines.scss';
-  .services-blocks {
+  .main-block-scheme {
+      border: 5px solid pink;
+      height: 100px;
+      padding: 30px;
+  }
+
+  .services-blocks-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    .service-block-wrap {
       display: flex;
       flex-wrap: nowrap;
-      flex-flow: column;
-      /*
-      Всем наследниками pb:25pх
+      flex-flow: row;
+    }
+
+    /*
       для блоков сделать больше отступ
           .tests-block
           .validation-block
           .javascript-bundler-block
       последнему блоку убрать  отступ
       */
+    /*
+          Блок описывающий все таски в схеме функционала
+      */
+    .service-block {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-flow: row;
+      margin-bottom: 25px;
+      /*
+          Блок описывающий один большой таск в схеме функционала
+      */
+      .template-block {
+        padding: 30px;
+        border: 5px solid pink;
+      }
+    }
+    /*
+      Блок отвечающий за описание таска в схеме функционала
+    */
+    .description {
+      display: flex;
+      flex-flow: column;
+      /*
+        Блок описывающий задачи входящие в один большой таск в схеме функционала
+      */
+      .operation-block-wrap {
+
+        display: flex;
+        flex-flow: row;
+
+        .operation-block {
+          align-content: center;
+          align-items: flex-start;
+          // margin-bottom: 5px;
+          span {
+            padding: 3px;
+            text-align: center;
+            // margin: auto;
+          }
+        }
+      }
+    }
   }
 }
+
+

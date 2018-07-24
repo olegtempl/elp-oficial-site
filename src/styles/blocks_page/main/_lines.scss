@@ -1,19 +1,29 @@
-.services-lines {
-  display: flex;
-  padding-bottom: 25px;
-  flex-wrap: nowrap;
-  flex-flow: column;
 
-  .horizontal-line-wrap {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-
+.vertical-line , hr {
+   background-color: #fff;
+}
+  .vertical-line {
+    border-right: 2px solid #ccc;
   }
-  .horizontal-line {
-      hr {
-        height: 4px;
-      }
-      // background-color: rgba(ping, 0.8);
+
+
+.horizontal-line-main-block {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 100px;
+  hr {
+    width: 100px;
+  }
+
+}
+
+.horizontal-line {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  hr {
+    width: 100px;
   }
 }
+
