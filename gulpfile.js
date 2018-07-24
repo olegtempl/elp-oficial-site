@@ -158,7 +158,7 @@ const onError = (err) => {
 // pug > html
 gulp.task('pug', () => {
 	gulp.src(path.src.pug)
-		.pipe(plumber({errorHandler: onError}))
+		.pipe(plumber())
 		.pipe(pug({pretty: true}))
 		.pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
@@ -168,7 +168,7 @@ gulp.task('sass', () => {
 	gulp.src(path.src.scss)
 		.pipe(sass())
 		.pipe(inlineimage())
-		.pipe(plumber({errorHandler: onError}))
+		.pipe(plumber())
 		.pipe(prefix('last 3 versions'))
 		.pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true}));
@@ -306,13 +306,13 @@ gulp.task('speed', () => {
 });
 //------------------------------------------------Documentation
 //------------------------------JsDoc
-gulp.task('jsDoc', (cb) => {
+gulp.task('doc:jsdoc', (cb) => {
   gulp.src([path.docs.jsDoc, `${path.build.js}index.js`], {read: false})
     .pipe(notify({ message: message.documentation.jsDoc, onLast: false  }))
     .pipe(jsdoc(jsDocConfig, cb));
 });
 //------------------------------Readme
-// gulp.task('readme', function (cb) {
+// gulp.task('doc:readme', function (cb) {
 //   gulp.src()
 //     .pipe(notify({ message: message.documentation.readme, onLast: false  }))
 
