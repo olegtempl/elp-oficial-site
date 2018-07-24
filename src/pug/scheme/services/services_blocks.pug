@@ -1,81 +1,49 @@
 //- TODO:
-    * Добавить якоря к .operation-blocks на документацию к соотсвествующим местам
+	* Добавить якоря к .operation-blocks на документацию к соотсвествующим местам
+mixin horizontalLine
+	.horizontal-line-wrap
+		.horizontal-line
+			hr
+mixin services-block(blockProperty)
+	-
+		let templateBlockName = blockProperty[0],
+			firstOperationBlockName = blockProperty[1][0],
+			//- firstOperationBlockAnchor = blockProperty[1[1]],
+			//- secondOperationBlockName = blockProperty[2][0],
+			//- secondOperationBlockAnchor = blockProperty[2[1]],
+			//- thirdOperationBlockName = blockProperty[3][0],
+			//- thirdOperationBlockAnchor = blockProperty[3[1]],
+			//- forthOperationBlockName = blockProperty[4][0],
+			//- forthOperationBlockAnchor = blockProperty[4[1]],
+			listOperationBlocks = blockProperty.splice(1, blockProperty.length),
+			howMuchHorizontalLine = listOperationBlocks.length;
 
+	.service-block-wrap
+		+horizontalLine
+		.service-block
+			.template-block
+				h2.text-sm= templateBlockName
+			.description
+				each element in listOperationBlocks
+					.operation-block-wrap
+						+horizontalLine
+						.operation-block
+							a(href= element[1]).text-xs= element[0]
 
+-
+	let docsProperties = ['Documentation', ['JsDoc', '#jsdoc_docs'], ['Readme Bundler', '#readme_docs']],
+		serversProperties = ['Servers', ['Local-host server', '#localhost'], ['Livepreload server', '#livepreload'], ['Selenium server','#selenium']],
+		envProperties = ['Environment', ['Development Environment', '#development_envoirement'], ['Presentation Environment', '#presentation_envoirement'], ['Prodaction Environment','prodaction_envoirement']],
+		testingProperties = ['Testing', ['Jasmine tests', '#jasmine_tests'], ['Mocha tests', '#mocha_tests'], ['GUI tests', '#gui_tests']],
+		validationProperties = ['Validation', ['Html validation', '#html_validation'], ['Js validation', '#js_validation']],
+		notificationProperties = ['Notification', ['Cl.log', '#cllog'], ['Gulp-notify', '#gulpnotify']],
+		jsProperties = ['Javascript', 'Bundle and Minification javascript with Roll Up', 'Linters javascript for Eslint'];
 
-.service-block
-    .template-block
-        span Documentation
-    .operation-block
-        span JsDoc
-    .operation-block
-        span Readme Bundler
-.service-block
-    .template-block
-        span Servers
-    .operation-block
-        span Local-host server
-    .operation-block
-        span Livepreload server
-    .operation-block
-        span Selenium server
-.service-block
-    .template-block
-        span Envoirement
-    .operation-block
-            span Development Envoirement
-    .operation-block
-            span Presentation envoirement
-    .operation-block
-            span Prodaction envoirement
-.service-block
-    .operation-block
-        span Testing
-    .operation-block
-        span Jasmine tests
-    .operation-block
-        span Mocha tests
-    .operation-block
-        span GUI tests
-.service-block
-    .operation-block
-        span Validation
-    .operation-block
-        span Html validation
-    .operation-block
-        span Js validation
-
-.service-bundler-block
-    .template-block
-        span Roll Up
-    .operation-block
-        span Bundle javascript
-    .operation-block
-        span Minification javascript
-    .operation-block
-        span Linters javascript
-    .-block
-        span
-
-.service-block
-    .template-block
-        span Notification
-    .operation-block
-        span Cl.log
-    .operation-block
-        span Gulp-plugin
-
-
-//- -block
-//-     .template-block
-//-         span
-//-     .operation-block
-//-         span
-//-     .operation-block
-//-         span
-//-     .operation-block
-//-         span
-//-     .operation-block
-//-         span
-//-     .operation-block
-//-         span
++services-block(docsProperties)
++services-block(serversProperties)
++services-block(envProperties)
++services-block(testingProperties)
++services-block(validationProperties)
++services-block(notificationProperties)
++services-block(jsProperties)
+//- +services-block()

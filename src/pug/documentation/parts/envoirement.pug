@@ -1,29 +1,20 @@
-a(href="envoirement")
-h2 Окружения для запуска задач
-    p Доступно 3 вида окружения для запуска задач 
-    ul
-        li a(href="Development_envoirement") * Development 
-            
-        li a(href="Prodaction_envoirement") * Prodaction
-              
-        li a(href="Presentation_envoirement") * Presentation
-              
-        
-    article 
-        a(href="Development_envoirement")
-        .template-block   
-            h3 Development envoirement
-        p.
+include mixins/article
 
-    article    
-        a(href="Prodaction_envoirement")
-        .template-block   
-            h3 Prodaction envoirement
-        p.
-            Минифицирование ...
-    article    
-        a(href="Presentation_envoirement")
-        .template-block   
-            h3 Presentation envoirement
-        p.
-            Версия для презентации. Создаеться архив + открыт сервер для быстрого представления заказчику работы 
+a(name="envoirement")
+h2.text-md.text-center.docs-template-block Окружение для запуска задач
+p Доступно 3 вида окружения для запуска задач
+ul
+	li
+		a(href="#development_envoirement") Development
+	li
+		a(href="#production_envoirement") Production
+	li
+		a(href="#presentation_envoirement") Presentation
+
++description('development_envoirement', 'gulp', 'Development envoirement', 'Режим для разработки - это набор процедур и инструментов для разработки, тестирования и отладки приложения. Во время запуска проекта в режиме разработки запускаеться сервер для отображения результатов в браузере в режиме реального времени и происходит преобразование из *.pug в *.html, *.scss в *.css')
++description('production_envoirement', 'gulp build', 'Production envoirement', 'Режим для разработки - это набор процедур и инструментов для создания окончательной версии приложения, файлы проходят минификацию и валидацию, их окончательный размер выводится консоль.')
++description('resentation_envoirement', 'gulp view', 'Presentation envoirement', 'Режим для презентации - это набор процедур и инструментов для возможности показать последнюю версию проекта заказчику. При переходе в этот режим запускаеться сервер-туннель, ссылку для доступа к которому будет отображена в консоли, так же происходит создание архива последней версии приложения для убоства отправки по интернету.')
+
+
+.triangle-up
+a(href="#top") К началу документации

@@ -1,0 +1,24 @@
+include ../mixins/article
+
+h2.text-md.text-center.docs-template-block Валидацая
+p Доступно 2 вида инструментов для валидации.
+ul
+	li
+		a(href="#html_validation") Html валидацая
+	li
+		a(href="#js_validation") Javascript валидацая
+
++description( 'html_validation', 'validation:html', 'Html валидацая', '')
++description( 'js_validation', 'validation:js', 'Javascript валидацая', '')
+article
+	p * Для запуска всех типов валидации
+	.command-wrap
+		p.text-md.command= 'Выполните комманду: '
+			code gulp validation
+			span.blink-text
+
+
+
+
+.triangle-up
+a(href="#top") К началу документации

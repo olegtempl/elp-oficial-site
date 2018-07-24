@@ -1,16 +1,18 @@
-h2 Уведомления о событиях
-    p Доступно 2 вида инструментов для уведомлений
-    ul 
-        li a(href="") Cl.log 
-        li a(href="") Gulp plugin
-    article 
-        a(href="cl_notify")
-        .template-block   
-            h3 Cl.log
-        p.
-    article 
-        a(href="gulp_notify")
-        .template-block   
-            h3 Gulp notify
-        p. 
-    
+include mixins/article
+h2.text-md.text-center.docs-template-block Уведомления о событиях
+p Доступно 2 вида инструментов для уведомлений
+ul
+	li
+		a(href="#cllog") Cl.log
+	li
+		a(href="#gulpnotify") Gulp notify plugin
++description('#cllog', 'Cl.log', 'Cl.log - удобен для разноцветной подсветки вывода информации в консоли.')
++description('#gulpnotify', 'Gulp notify plugin', 'Gulp notify plugin - плагин обеспечивающий кроссплатформенную поддержку появления всплывающих окон при возникающих событиях')
+
+
+.triangle-up
+
+a(href="#top") К началу документации
+
+
+//- <a href="https://www.npmjs.com/package/node-cl-log">Cl.log</a>
