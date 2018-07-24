@@ -1,25 +1,17 @@
 //- TODO:
 	* шапку из последнего фриланса
-	* перевести на express + подтяжка данных из json файла => конвертация в html
 include ./templates/head
-	//- header
+	header
 	header
 		include ./templates/header
 	//- main content
 	main
-		include scheme/scheme.pug
+		include ./scheme/scheme
 		//- добавить возврат после каждого пункта к схеме
-		include documentation/documentation.pug
+		include ./documentation/documentation
 	//- footer
 	footer
-		include ./templates/footer
+		//- include ./templates/footer
 
 
 
-
-
-
-
-//- .container 
-//- 	.
-//- 		include 

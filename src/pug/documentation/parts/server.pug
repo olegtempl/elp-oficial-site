@@ -1,0 +1,19 @@
+include mixins/article
+
+h2.text-md.text-center.docs-template-block Серверное окружение
+p Доступно 3 вида запускаемых серверов.
+ul
+	li
+		a(href="#localhost") Local-host server
+	li
+		a(href="#livepreload") Livepreload server
+	li
+		a(href="#selenium") Selenium server
+
++description('localhost', 'gulp server', 'Localhost server', ' Этот тип серверного окружения используеться для того что-бы другие люди могли увидеть актуальную версию вашего приложения. ELP запускает сервер и выводит в консоль ссылку по которой будет доступно ваше приложение. Этот тип серверов используется в режиме для презентации приложения.')
++description('livepreload', 'gulp browser-sync', 'Livepreload  server', 'Этот тип серверного окружения используеться для отображения изменений в коде вашего приложения. Этот тип серверов используется в режиме разработки.')
++description('selenium', 'gulp selenium', 'Selenium server', 'Этот тип серверного окружения используеться для запуска java сервера и всего что для этого необходимо. Этот тип серверов используется для запуска GUI тестов и тестов скорости загрузки страницы.')
+
+.triangle-up
+a(href="#top") К началу документации
+

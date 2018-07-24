@@ -1,0 +1,31 @@
+include mixins/article
+
+a(name="top")
+
+h2.text-md.text-center.docs-template-block  Документация
+p Доступно 3 вида инструментов для генерации документации
+ul
+	li
+		a(href="#jsdoc_docs") JsDoc
+	li
+		a(href="#readme_docs") Readme bundler
+	li
+		a(href="#licence_docs") Licence library
+
++description('jsdoc_docs', 'gulp doc:jsdoc', 'jsDoc', 'JSDoc — генератор документации в HTML-формате из комментариев исходного кода на JavaScript. Синтаксис JSDoc похож на синтаксис Javadoc, используется для документирования JavaScript кода. JSDoc позволяет программисту создавать доклеты и теги, которые могут быть выведены в файл, например HTML или RTF. ')
++description('readme_docs', 'gulp doc:readme', 'Readme Bundler ( on future )', '')
++description('licence_docs', 'gulp doc:licence', 'Лицензирование проекта ( on future )', '')
+article
+	p * Для запуска всех инструментов документирования
+	.command-wrap
+		p.text-md.command= 'Выполните комманду: '
+			code gulp doc
+			span.blink-text
+
+
+
+.triangle-up
+a(href="#top") К началу документации
+
+
+

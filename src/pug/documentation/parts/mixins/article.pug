@@ -1,0 +1,10 @@
+mixin description(anchor, command, heading, specification)
+	a(name= anchor)
+	article
+		h3.text-sm.text-center= heading
+		p= specification
+		.command-wrap
+			p.text-md.command= 'Выполните комманду: '
+				code= command
+				span.blink-text
+
