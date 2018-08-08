@@ -1,4 +1,3 @@
-include mixins/article
 h2.text-md.text-center.docs-template-block Уведомления о событиях
 p Доступно 2 вида инструментов для уведомлений
 ul
@@ -6,12 +5,19 @@ ul
 		a(href="#cllog") Cl.log
 	li
 		a(href="#gulpnotify") Gulp notify plugin
-+description('#cllog', 'Cl.log', 'Cl.log - удобен для разноцветной подсветки вывода информации в консоли.')
-+description('#gulpnotify', 'Gulp notify plugin', 'Gulp notify plugin - плагин обеспечивающий кроссплатформенную поддержку появления всплывающих окон при возникающих событиях')
 
+a(name='#cllog')
+article
+	h3.text-sm.text-center Cl.log
+	p Cl.log - удобен для разноцветной подсветки вывода информации в консоли.
+
+
+a(name='#gulpnotify')
+article
+	h3.text-sm.text-center Gulp notify plugin
+	p Gulp notify plugin - плагин обеспечивающий кроссплатформенную поддержку появления всплывающих окон при возникающих событиях.
 
 .triangle-up
-
 a(href="#top") К началу документации
 
 

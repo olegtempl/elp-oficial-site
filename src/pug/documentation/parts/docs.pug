@@ -3,20 +3,23 @@ include mixins/article
 a(name="top")
 
 h2.text-md.text-center.docs-template-block  Документация
-p Доступно 3 вида инструментов для генерации документации
+p Доступно 4 вида инструментов для создания документации
 ul
 	li
 		a(href="#jsdoc_docs") JsDoc
+	li
+		a(href="#sass_docs") Sass doc
 	li
 		a(href="#readme_docs") Readme bundler
 	li
 		a(href="#licence_docs") Licence library
 
 +description('jsdoc_docs', 'gulp doc:jsdoc', 'jsDoc', 'JSDoc — генератор документации в HTML-формате из комментариев исходного кода на JavaScript. Синтаксис JSDoc похож на синтаксис Javadoc, используется для документирования JavaScript кода. JSDoc позволяет программисту создавать доклеты и теги, которые могут быть выведены в файл, например HTML или RTF. ')
-+description('readme_docs', 'gulp doc:readme', 'Readme Bundler ( on future )', '')
-+description('licence_docs', 'gulp doc:licence', 'Лицензирование проекта ( on future )', '')
++description('sass_docs', 'gulp doc:sassdocc', 'SassDoc', 'SassDoc для Sass  — это тоже самое что и JSDoc для JavaScript.SassDoc - это генератор документации в HTML-формате из комментариев исходного кода на sass/scss. Синтаксис SassDoc похож на синтаксис JSDoc/Javadoc. SassDoc позволяет программисту создавать доклеты и теги, которые могут быть выведены в файл, например HTML или RTF. ')
++description('readme_docs', 'gulp doc:readme', 'Readme Bundler', 'Readme Bundler - это незаменимый помощник в создании логически оформленного и структурированного файла README.md в корне вашего проекта из различных небольших заготовок.')
++description('licence_docs', 'gulp doc:licence', 'Licence Library', 'Licence Library - поможет вам сгенерировать подходящий файл вам файл лицензии и проставит за вас копирайт.')
 article
-	p * Для запуска всех инструментов документирования
+	p * Если вам необходимо сгенерировать все виды документации в проекте
 	.command-wrap
 		p.text-md.command= 'Выполните комманду: '
 			code gulp doc

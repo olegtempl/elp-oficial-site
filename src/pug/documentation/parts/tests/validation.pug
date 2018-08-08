@@ -1,15 +1,19 @@
 include ../mixins/article
 
-h2.text-md.text-center.docs-template-block Валидацая
-p Доступно 2 вида инструментов для валидации.
+h2.text-md.text-center.docs-template-block Валидация
+p Доступно 3 вида инструментов для валидации.
 ul
 	li
-		a(href="#html_validation") Html валидацая
+		a(href="#html_validation") Html валидация
 	li
-		a(href="#js_validation") Javascript валидацая
+		a(href="#js_validation") Javascript валидация
+	li
+		a(href="#scss_validation") Scss валидация
 
-+description( 'html_validation', 'validation:html', 'Html валидацая', '')
-+description( 'js_validation', 'validation:js', 'Javascript валидацая', '')
++description( 'html_validation', 'gulp validation:html', 'Html валидация', 'Валидация сайта — это проверка синтаксических ошибок, проверка вложенности тэгов и ряда других критериев. Как правило, валидаторы (сервисы для проверки сайтов на наличие ошибок в структуре документа) проверяют HTML-код на соответствие определенному стандарту, который указан в самом начале любой HTML-страницы первой строчкой. ')
++description( 'js_validation', 'gulp validation:js', 'Javascript валидация', 'Javscript валидация осуществляеться при помощи EsLint и настроена на стиль стиль коддирования от airBnb. В проекте так же используеться prettier, который удобно добавлять в git hooks')
++description( 'scss_validation', 'gulp validation:scss', 'Scss валидация', 'Scss валидация осуществляеться при помощи Scss-lint и настроена на стиль стиль коддирования от airBnb.')
+
 article
 	p * Для запуска всех типов валидации
 	.command-wrap
